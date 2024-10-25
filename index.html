@@ -473,5 +473,18 @@
     <div class="footer">
         <p>جميع الحقوق محفوظة لدى ديفينجو © 2024</p>
     </div>
+<script>
+    // تطبيق التأخير على الروابط
+    document.querySelectorAll('.btn, .main-section.button, .main-sectio, .main-secti-button').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // منع الانتقال الفوري
+            const href = this.getAttribute('href'); // الحصول على الرابط
+            
+            setTimeout(() => {
+                window.open(href, '_blank'); // الانتقال بعد 200 مللي ثانية
+            }, 200); // تأخير 200 مللي ثانية
+        });
+    });
+</script>
 </body>
 </html>
